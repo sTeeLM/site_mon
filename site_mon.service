@@ -1,0 +1,13 @@
+[Unit]
+Description=Site Monitor Service (site_mon)
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /usr/sbin/site_mon.py
+Restart=always
+RestartSec=10
+User=root
+
+[Install]
+WantedBy=multi-user.target
